@@ -82,8 +82,6 @@ exports.crawling = functions.pubsub.schedule('every 5 minutes').onRun(async(cont
                         upRef.update({
                             searched
                         })
-
-                        if(token !== "dhb1LX_u_kYGvn3-JXEkVs:APA91bHRoGTpQCfl0T3z4Wi_nH_g6euvvfGYFDq_hX4GBurQ0Q3AxfJ72YY_vhS02NRNmomsDPY9k__qCXCx7jdzWVRbkODCE8cwyPdDrMKHjF1BXGgbD5aI1Ol518a2Wa6I8j8saSLy") return;
                         
                         console.log('token : ', token);
                         admin.messaging().sendToDevice([token], payload, options)
