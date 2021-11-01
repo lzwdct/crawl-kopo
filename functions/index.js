@@ -17,7 +17,7 @@ const FCM = require('fcm-node');
 const url = require('url');
 const crawl = require('./getListfromURL');
 
-exports.crawling = functions.pubsub.schedule('every 5 minutes').onRun(async(context) => {
+exports.crawling = functions.pubsub.schedule('*/5 8-23 * * *').timeZone('Pacific/Auckland').onRun(async(context) => {
     if (!admin.apps.length) {
 
         admin.initializeApp({
